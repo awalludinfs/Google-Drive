@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\admins;
 Use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class AdminController extends Controller
 {
-    public function index(){
-        return view('login.login');
+    public function login(){
+        return view('Admin.loginadmin');
     }
     public function Authenticate(Request $request){
         $credentials =$request->validate([

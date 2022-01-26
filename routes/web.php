@@ -1,9 +1,14 @@
 <?php
-
+//User
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\DrivesayaController;
+
+//admin
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DatauserController;
+Use App\Http\Controllers\DatafileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +20,26 @@ use App\Http\Controllers\DrivesayaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//admin
+Route::get('/admins',[AdminController::class, 'login']);
+Route::post('/admnis',[AdminController::class, 'Authenticate']);
+
+//halamanadmin
+Route::get('/halamanadmin', function(){
+    return view('Admin.navbaradmin.utama');
+});
+
+//Users (admin)
+Route::get('/users',[DatauserController::class, 'index']);
+Route::get('/datauser/status/{id}',[DatauserController::class, 'status']);
+Route::get('/detailusers',[DatafileController::class, 'detail']);
+//(Belum Selesai!!)
+
+//File Data User(admin)
+Route::get('/fileuser',[DatafileController::class,'index']);
+// Route::get('/datafile/destroy/{id}',[DtafileController::class, 'destroy']);
+
+
 //Login
 Route::get('/',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'Authenticate']);

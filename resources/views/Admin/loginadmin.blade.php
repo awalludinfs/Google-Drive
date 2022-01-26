@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Login</title>
+    <title>Login Admin</title>
   </head>
   <body>
 
@@ -56,7 +56,7 @@
          <div id="card">
              <main class="form-signin">
                  </style>
-                 <h1 class="h3 mb-3 fw-normal text-center fw-bold ">Please Login</h1> 
+                 <h1 class="h3 mb-3 fw-normal text-center fw-bold ">Please Login Admin</h1> 
                  <center>
                      <img src="/img/login.png" class="rounded-circle" alt="...">
                     </center>

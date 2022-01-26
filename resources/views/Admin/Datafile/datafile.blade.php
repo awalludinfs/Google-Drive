@@ -1,6 +1,6 @@
-@extends('layout.main')
+@extends('Admin.navbaradmin.utama')
 
-@section('judul','Drive Saya|Latihan5')
+@section('judul','Data file (Admin)|Latihan6')
 
 @section('halaman')
 <style>
@@ -9,13 +9,10 @@
         background-image: url('/img/bbg.jpg');
     }
 </style>
-{{-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">welcome to dashboard page , {{ auth()->user()->name }}</h1>
-</div> --}}
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h2 class="mt-2 text-dark">Drive Saya</h2>
+            <h2 class="mt-2 text-dark">Data file User</h2>
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status')}}
@@ -30,6 +27,7 @@
                     <th scope="col">Judul</th>
                     <th scope="col">Isi</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Opsi</th>
                 </thead>
                 <tbody class="table-light">
@@ -41,6 +39,7 @@
                         <td>{{ $Drivesaya->judul }}</td>
                         <td>{{ $Drivesaya->isi }}</td>
                         <td><button class="btn btn-success">{{ $Drivesaya->status }}</button></td>
+                        <td>{{ $Drivesaya->email }}</td>
                          <td class="text-center">
                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="#" method="POST">
                                 <a href="#" class="btn btn-sm btn-primary">EDIT</a>
